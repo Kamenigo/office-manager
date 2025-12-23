@@ -1,0 +1,30 @@
+# Secrets (никога в Git)
+.env
+.env.*
+!*.example
+backend/config.php
+backend/config.local.php
+
+# Uploads / storage (документи, PDF, снимки)
+uploads/
+storage/
+public/uploads/
+public/storage/
+
+# Logs / cache / temp
+logs/
+tmp/
+temp/
+cache/
+*.log
+
+# Dependencies (ако изобщо се появят)
+vendor/
+node_modules/
+composer.lock
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
