@@ -68,3 +68,10 @@ Build the platform structure first: auth, roles, workspaces/teams, admin panel, 
 - Do not refactor unrelated files.
 - When producing code: always provide file path + exact code block + exact place to paste.
 - Implement one module/endpoint/page at a time.
+
+- ## Security source of truth
+- You MUST read and follow docs/SECURITY.md.
+- Treat all security rules there as non-negotiable requirements.
+- Any backend endpoint must enforce: session + email verified + workspace scoping.
+- File uploads must be non-public and served only via authenticated download endpoint.
+
