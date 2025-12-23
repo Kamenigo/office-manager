@@ -33,7 +33,7 @@ function om_require_role(array $allowed_roles): void {
   $role = $_SESSION['role'] ?? null;
   if (!$role || !in_array($role, $allowed_roles, true)) {
     http_response_code(403);
-    echo "403 Forbidden";
+    echo "403 Forbidden - на ясно си че нямаш работа тук. Твоят IP adress е записан!";
     exit;
   }
 }
