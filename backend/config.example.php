@@ -7,7 +7,7 @@
 return [
   'db' => [
     'host' => 'localhost',
-    'name' => 'office_manager',
+    'name' => 'refurnis_TaskPilot',
     'user' => 'db_user',
     'pass' => 'db_password',
     'charset' => 'utf8mb4',
