@@ -1,1 +1,6 @@
+# Block direct access to index.html only
+# CSS, JS, images and other assets are still accessible
 
+<Files "index.html">
+  Require all denied
+</Files>
