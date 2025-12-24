@@ -8,14 +8,14 @@ return [
   'db' => [
     'host' => 'localhost',
     'name' => 'refurnis_TaskPilot',
-    'user' => 'db_user',
-    'pass' => 'db_password',
+    'user' => 'refurnis_task',
+    'pass' => 'kamenigo77',
     'charset' => 'utf8mb4',
   ],
 
   // App base url used for email links (verify/invite)
   'app' => [
-    'base_url' => 'https://your-domain.com',
+    'base_url' => 'https://re-furnishbg.com',
   ],
 
   // For sessions / tokens (set real random string in backend/config.php)

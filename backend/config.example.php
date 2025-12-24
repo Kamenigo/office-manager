@@ -7,7 +7,7 @@
 return [
   'db' => [
     'host' => 'localhost',
-    'name' => 'refurnis_TaskPilot',
+    'name' => 'office_manager',
     'user' => 'db_user',
     'pass' => 'db_password',
     'charset' => 'utf8mb4',
@@ -23,9 +23,3 @@ return [
     'app_key' => 'CHANGE_ME_RANDOM_LONG_STRING',
   ],
 ];
-
-
-
-
-
-
