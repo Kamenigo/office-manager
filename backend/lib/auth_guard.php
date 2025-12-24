@@ -2,7 +2,7 @@
 // backend/lib/auth_guard.php
 // Minimal, strict guard: session required + email verified + role check (optional)
 
-function om_start_session(): void {
+function om_start_session() {
   if (session_status() === PHP_SESSION_NONE) {
     // Secure-ish defaults for shared hosting
     ini_set('session.use_strict_mode', '1');
@@ -10,16 +10,16 @@ function om_start_session(): void {
   }
 }
 
-function om_require_login(): void {
+function om_require_login() {
   om_start_session();
 
   if (empty($_SESSION['user_id'])) {
-    header('Location: /login.php');
+    header('Location: /office-manager/login.php');
     exit;
   }
 
   if (empty($_SESSION['is_email_verified']) || $_SESSION['is_email_verified'] != 1) {
-    header('Location: /verify-required.php');
+    header('Location: /office-manager/verify-required.php');
     exit;
   }
 }
@@ -27,7 +27,7 @@ function om_require_login(): void {
 /**
  * @param array $allowed_roles e.g. ['admin','pm']
  */
-function om_require_role(array $allowed_roles): void {
+function om_require_role(array $allowed_roles) {
   om_require_login();
 
   $role = $_SESSION['role'] ?? null;
@@ -37,4 +37,3 @@ function om_require_role(array $allowed_roles): void {
     exit;
   }
 }
-
